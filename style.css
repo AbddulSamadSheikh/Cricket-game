@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,700");
+
+.hide {
+  display: none !important;
+}
+div#team-selection{
+  position: absolute;
+  padding: 20px;
+  background: rgba(255,255,255, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.teams {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+div#team-selection .team {
+  padding: 6px;
+  height: 80px;
+  width: 150px;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+  cursor: pointer;
+}
+div#team-selection .team:hover{
+  box-shadow: 5px 5px 10px 15px lightblue;
+}
+#toss>img:hover{
+  box-shadow: 0px 0px 15px 5px lightblue;
+}
+div#team-selection .selected-team {
+  border-color: red;
+}
+#toss{
+  position: absolute;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#toss > img{
+  cursor: pointer;
+}
+.your-team {
+  text-decoration: underline;
+}
+
+body{
+  background: url('images/bg.jpg') no-repeat fixed center;
+  background-size: cover;
+  font-family: 'Roboto';
+}
+ 
+#login{
+  padding: 50px;
+  position: absolute;
+  background: rgba(255,255,255, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#user-name{
+  padding: 8px 12px;
+  background: #fbfbfb;
+  border: 1px solid gray;
+  font-size: large;
+  border-radius: 4px;
+}
+
+.btn{
+  padding: 8px 12px;
+  width: fit-content;
+  font-size: large;
+  background: white;
+  border: 1px solid gray;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.btn:hover{
+  background: rgba(255,255,255,.8);
+}
+.team{
+background-size: cover;
+}
+#pak{
+  background-image: url('images/pak-flag.png');
+}
+#nz{
+  background-image: url('images/nz-flag.png');
+}
+#aus{
+  background-image: url('images/aus-flag.png');
+}
+#sa{
+  background-image: url('images/sa-flag.png');
+}
+#afg{
+  background-image: url('images/afg-flag.png');
+}
+#ind{
+  background-image: url('images/ind-flag.png');
+}
+#eng{
+  background-image: url('images/eng-flag.png');
+}
+#bangla{
+  background-image: url('images/bangla-flag.png');
+}
+#match{
+  position: absolute;
+  padding: 20px;
+  background: rgba(255,255,255, 0.8);
+  bottom: 0px;
+  left: 0px;
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: space-between;
+}
+.vs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ground-team{
+  width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 120px;
+}
+.score-board{
+  margin-left: 50px;
+  margin-top: 20px;
+  font-weight: bolder;
+}
+.score-board-2{
+  margin-right: 50px;
+  margin-top: 20px;
+  font-weight: bolder;
+}
+.d-flex{
+  display: flex;
+}
+.score{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 150px;
+  font-weight: 600;
+  text-shadow: 0px 0px 25px yellow;
+  color: white;
+}

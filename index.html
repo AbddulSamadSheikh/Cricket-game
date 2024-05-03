@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <audio id="crowd-cheer" loop="false">
+    <source src="sounds/crowd-cheer.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="crowd-disapointed" loop="false">
+    <source src="sounds/crowd-disapointed.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="score hide" id="score"></div>
+  <div id="login">
+    <h1>Your Name</h1>
+    <input type="text" placeholder="Enter Your Name" id="user-name" />
+    <button onclick="getUserName()" class="btn">Next</button>
+  </div>
+  <div id="team-selection" class="hide">
+    <p id="your-selection-text">Select Your Team</p>
+    <p id="opon-selection-text" class="hide">Select Your Oponent Team</p>
+    <div class="teams">
+      <div onclick="selectTeam('pak')" id="pak" class="team"></div>
+      <div onclick="selectTeam('aus')" id="aus" class="team"></div>
+      <div onclick="selectTeam('sa')" id="sa" class="team"></div>
+      <!-- <div onclick="selectTeam('nz')" id="nz" class="team">New Zealand</div> -->
+      <div onclick="selectTeam('afg')" id="afg" class="team"></div>
+      <div onclick="selectTeam('eng')" id="eng" class="team"></div>
+      <div onclick="selectTeam('ind')" id="ind" class="team"></div>
+      <div onclick="selectTeam('bangla')" id="bangla" class="team">
+
+      </div>
+    </div>
+    <button onclick="gotoNextFromTeam()" class="btn">Next</button>
+  </div>
+  <div id="toss" class="hide">
+    <img onclick="getUserToss(0)" src="images/heads.png" />
+    <img onclick="getUserToss(1)" src="images/tails.png" />
+  </div>
+  <div id="match" class="hide">
+    <div class="d-flex">
+      <span id="your-team"></span>
+      <div class="score-board">
+        <p>Score: <span id="total-runs"></span>/<span id="wickets"></span></p>
+        <p class="hide" id="target-section">Target Score: <span id="target-score"></span></p>
+      </div>
+    </div>
+    <h1 class="vs">V/S
+      <button id="play-button" class="btn" onclick="playBall()">Play</button>
+      <button id="restart-button" class="hide btn" onclick="restartGame()">Restart</button>
+    </h1>
+    <div class="d-flex">
+      <div class="score-board-2">
+        <p>Balls: <span id="current-ball"></span>/<span id="total-balls"></span></p>
+        <p>Wicket Remaining: <span id="wicket-remains"></span></p>
+      </div>
+      <span id="opon-team"></span>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

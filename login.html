@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="login-form">
+        <input type="email" placeholder="Enter Your Email" id="email">
+        <input type="password" placeholder="Enter Your password" id="password">
+        <button type="submit">Submit</button>
+
+    </form>
+    <script>
+        window.onload = function () {
+            document.getElementById("login-form").onsubmit = function (e) {
+                e.preventDefault();
+                let useremail = document.getElementById("email").value;
+                let userpassword = document.getElementById("password").value;
+                if (
+                    useremail == "smad@gmail.com" && userpassword == "123"
+
+                ) {
+                    alert("login-success")
+
+                }
+                else {
+                    alert("login-fail")
+                }
+            }
+        }
+        // 
+    </script>
+</body>
+
+</html>
